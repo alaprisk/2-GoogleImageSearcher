@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gridsearch"
+    tools:context="com.codepath.rishi.gridimagesearch.activities.SearchActivity" >
+
+    
+    <EditText
+        android:id="@+id/etQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnSearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnSearch"
+		android:textColorHint="#AAAAAA"
+        android:textColor="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/search_prompt" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onImageSearch"
+        android:alpha="1"
+        android:textColor="#FFFFFF"
+        android:text="@string/search_label" />
+
+    <GridView
+        android:id="@+id/gvResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etQuery"
+        android:alpha="1"
+       
+        android:numColumns="3" >
+
+    </GridView>
+</RelativeLayout>
